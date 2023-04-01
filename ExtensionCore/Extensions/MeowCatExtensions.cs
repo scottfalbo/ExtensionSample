@@ -1,9 +1,9 @@
-﻿
-using ExtensionCore.Models;
-using System.Runtime.CompilerServices;
-/// ------------------------------------
+﻿/// ------------------------------------
 /// Basic use of Extensions sample code
 /// ------------------------------------
+
+using ExtensionCore.Models;
+
 namespace ExtensionCore.Extensions
 {
     public static class MeowCatExtensions
@@ -13,7 +13,7 @@ namespace ExtensionCore.Extensions
 
         public static bool IsSameType(this MeowCat meow, MeowCat otherMeow) =>
             meow.Type == otherMeow.Type;
-        
+
         public static bool IsSameAgeAndType(this MeowCat meow, MeowCat otherMeow) =>
             meow.Type == otherMeow.Type && meow.Age == otherMeow.Age;
 

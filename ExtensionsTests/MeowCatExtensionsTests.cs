@@ -78,6 +78,5 @@ namespace ExtentionTests
             _ethel = new MeowCat("Ethel", 7, "Tabby");
             _weeeeps = new MeowCat("Weeeeps", 2, "Fluffy");
         }
-
     }
 }

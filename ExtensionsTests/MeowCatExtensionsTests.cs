@@ -72,11 +72,11 @@ namespace ExtentionTests
         [TestInitialize]
         public void TestInitialize()
         {
-            _spaceghost = new MeowCat("Spaceghost", 14, "Siamese");
-            _harryWinston = new MeowCat("Harry Winston", 14, "Fluffy");
-            _lucipurr = new MeowCat("Lucipurr", 7, "Tabby");
-            _ethel = new MeowCat("Ethel", 7, "Tabby");
-            _weeeeps = new MeowCat("Weeeeps", 2, "Fluffy");
+            _spaceghost = new MeowCat(name: "Spaceghost", age: 14, type: "Siamese");
+            _harryWinston = new MeowCat(name: "Harry Winston", age: 14, type: "Fluffy");
+            _lucipurr = new MeowCat(name: "Lucipurr", age: 7, type: "Tabby");
+            _ethel = new MeowCat(name: "Ethel", age: 7, type: "Tabby");
+            _weeeeps = new MeowCat(name: "Weeeeps", age: 2,  type: "Fluffy");
         }
     }
 }

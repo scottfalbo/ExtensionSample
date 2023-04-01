@@ -72,11 +72,20 @@ namespace ExtentionTests
         [TestInitialize]
         public void TestInitialize()
         {
-            _spaceghost = new MeowCat(name: "Spaceghost", age: 14, type: "Siamese");
-            _harryWinston = new MeowCat(name: "Harry Winston", age: 14, type: "Fluffy");
-            _lucipurr = new MeowCat(name: "Lucipurr", age: 7, type: "Tabby");
-            _ethel = new MeowCat(name: "Ethel", age: 7, type: "Tabby");
-            _weeeeps = new MeowCat(name: "Weeeeps", age: 2,  type: "Fluffy");
+            var spaceshostCattributes = new string[] { Cattribute.PurrMonster, Cattribute.Handsome, Cattribute.CuddlePudding };
+            _spaceghost = new MeowCat(name: "Spaceghost", age: 14, type: "Siamese", spaceshostCattributes);
+
+            var harryWinstonCattributes = new string[] { Cattribute.PurrMonster, Cattribute.Handsome, Cattribute.CuddlePudding, Cattribute.Maniac };
+            _harryWinston = new MeowCat(name: "Harry Winston", age: 14, type: "Fluffy", harryWinstonCattributes);
+
+            var lucipurrCattributes = new string[] { Cattribute.PurrMonster, Cattribute.CuddlePudding, Cattribute.Terror };
+            _lucipurr = new MeowCat(name: "Lucipurr", age: 7, type: "Tabby", lucipurrCattributes);
+
+            var ethelCattributes = new string[] { Cattribute.PurrMonster, Cattribute.Maniac, Cattribute.Terror };
+            _ethel = new MeowCat(name: "Ethel", age: 7, type: "Tabby", ethelCattributes);
+
+            var weeeepsCattributes = new string[] { Cattribute.PurrMonster, Cattribute.Maniac, Cattribute.Terror };
+            _weeeeps = new MeowCat(name: "Weeeeps", age: 2,  type: "Fluffy", weeeepsCattributes);
         }
     }
 }

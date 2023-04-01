@@ -69,6 +69,58 @@ namespace ExtentionTests
             _weeeeps.GetInfo();
         }
 
+        [TestMethod]
+        public void GetCattributeCount_ReturnsCorrectCount()
+        {
+            var expectedSpaceghost = 3;
+            var actualSpaceghost = _spaceghost.GetCattributeCount();
+
+            var expectedHarryWinston = 4;
+            var actualHarryWinston = _harryWinston.GetCattributeCount();
+
+            var expectedLucipurr = 3;
+            var actualLucipurr = _lucipurr.GetCattributeCount();
+
+            var expectedEthel = 3;
+            var actualEthel = _ethel.GetCattributeCount();
+
+            var expectedWeeeeps = 3;
+            var actualWeeeeps = _weeeeps.GetCattributeCount();
+
+            Assert.AreEqual(expectedSpaceghost, actualSpaceghost);
+            Assert.AreEqual(expectedHarryWinston, actualHarryWinston);
+            Assert.AreEqual(expectedLucipurr, actualLucipurr);
+            Assert.AreEqual(expectedEthel, actualEthel);
+            Assert.AreEqual(expectedWeeeeps, actualWeeeeps);
+        }
+
+        [TestMethod]
+        public void GetSharedCattributesCount_ReturnCorrectCount_I()
+        {
+            var expected = 3;
+            var actual = _ethel.GetSharedCattributesCount(_weeeeps);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetSharedCattributesCount_ReturnCorrectCount_II()
+        {
+            var expected = 2;
+            var actual = _spaceghost.GetSharedCattributesCount(_lucipurr);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetSharedCattributesCount_ReturnCorrectCount_III()
+        {
+            var expected = 2;
+            var actual = _harryWinston.GetSharedCattributesCount(_weeeeps);
+
+            Assert.AreEqual(expected, actual);
+        }
+
         [TestInitialize]
         public void TestInitialize()
         {

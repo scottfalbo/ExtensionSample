@@ -32,17 +32,41 @@ namespace ExtentionTests
         }
 
         [TestMethod]
-        public void IsSameAge_SameType_ReturnsTrue()
+        public void IsSameType_SameType_ReturnsTrue()
         {
             var result = _weeeeps.IsSameType(_harryWinston);
             Assert.IsTrue(result);
         }
 
         [TestMethod]
-        public void IsSameAge_NotSameType_ReturnsFalse()
+        public void IsSameType_NotSameType_ReturnsFalse()
         {
-            var result = _ethel.IsSameAge(_weeeeps);
+            var result = _ethel.IsSameType(_weeeeps);
             Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void IsSameAgeAndType_SameAgeAndType_ReturnsTrue()
+        {
+            var result = _lucipurr.IsSameAgeAndType(_ethel);
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void IsSameAgeAndType_NotSameAgeAndType_ReturnsFalse()
+        {
+            var result = _harryWinston.IsSameAgeAndType(_weeeeps);
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void GetInfo_ConsoleWrites_TestExplorer()
+        {
+            _spaceghost.GetInfo();
+            _harryWinston.GetInfo();
+            _lucipurr.GetInfo();
+            _ethel.GetInfo();
+            _weeeeps.GetInfo();
         }
 
         [TestInitialize]

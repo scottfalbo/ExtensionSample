@@ -19,9 +19,9 @@ namespace ExtensionCore.Extensions
 
         public static void GetInfo(this MeowCat meow)
         {
-            Console.WriteLine($"Name: {meow.Name}");
-            Console.WriteLine($"Age: {meow.Name}");
-            Console.WriteLine($"Type: {meow.Name}");
+            Console.WriteLine($"\nName: {meow.Name}");
+            Console.WriteLine($"Age: {meow.Age}");
+            Console.WriteLine($"Type: {meow.Type}\n");
         }
     }
 }

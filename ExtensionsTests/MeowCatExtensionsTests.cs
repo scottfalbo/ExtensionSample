@@ -24,6 +24,27 @@ namespace ExtentionTests
             Assert.IsTrue(result);
         }
 
+        [TestMethod]
+        public void IsSameAge_NotSameAge_ReturnsFalse()
+        {
+            var result = _spaceghost.IsSameAge(_weeeeps);
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void IsSameAge_SameType_ReturnsTrue()
+        {
+            var result = _weeeeps.IsSameType(_harryWinston);
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void IsSameAge_NotSameType_ReturnsFalse()
+        {
+            var result = _ethel.IsSameAge(_weeeeps);
+            Assert.IsFalse(result);
+        }
+
         [TestInitialize]
         public void TestInitialize()
         {
